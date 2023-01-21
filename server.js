@@ -11,10 +11,10 @@ const output = require('./controllers/output');
 const db = knex({
     client: 'pg',
     connection: {
-        host : '127.0.0.1',
-        user : 'postgres',
+        host : 'dpg-cf625tda499d72tmn5mg-a',
+        user : 'ddmuzyk',
         port: 5432,
-        password : 'bobdo',
+        password : 'xJnELpoFQzG1cOcF0EuKUvSsZeg7qsqG',
         database : 'chuckdb'
     }
 });
