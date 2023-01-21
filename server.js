@@ -29,6 +29,6 @@ app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db)})
 app.put('/generate', (req, res) => { output.handleGenerate(req, res, db)})
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt)})
 
-app.listen(3000, () => {
-    console.log('app is running on port 3000');
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`app is running on port ${process.env.PORT}`);
 })
