@@ -11,7 +11,7 @@ const output = require('./controllers/output');
 const db = knex({
     client: 'pg',
     connection: {
-        host : 'postgres://ddmuzyk:xJnELpoFQzG1cOcF0EuKUvSsZeg7qsqG@dpg-cf625tda499d72tmn5mg-a.frankfurt-postgres.render.com/chuckdb',
+        host : 'dpg-cf625tda499d72tmn5mg-a.frankfurt-postgres.render.com/chuckdb',
         user : 'ddmuzyk',
         port: 5432,
         password : 'xJnELpoFQzG1cOcF0EuKUvSsZeg7qsqG',
