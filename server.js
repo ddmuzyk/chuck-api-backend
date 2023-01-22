@@ -1,4 +1,6 @@
 const express = require('express');
+require('dotenv').config();
+console.log(process.env);
 const cors = require('cors');
 const bcrypt = require('bcrypt-nodejs');
 const knex = require('knex');
@@ -8,11 +10,13 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const output = require('./controllers/output');
 
-let PG_CONNECTION_STRING = "postgres://ddmuzyk:xJnELpoFQzG1cOcF0EuKUvSsZeg7qsqG@dpg-cf625tda499d72tmn5mg-a.frankfurt-postgres.render.com/chuckdb";
+
+
+
 
 const db = knex({
     client: 'pg',
-    connection: PG_CONNECTION_STRING,
+    connection: process.env.PG_CONNECTION_STRING,
     searchPath: ['knex', 'public']
 });
 
