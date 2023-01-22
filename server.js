@@ -8,9 +8,12 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const output = require('./controllers/output');
 
+let PG_CONNECTION_STRING = "postgres://ddmuzyk:xJnELpoFQzG1cOcF0EuKUvSsZeg7qsqG@dpg-cf625tda499d72tmn5mg-a.frankfurt-postgres.render.com/chuckdb";
+
 const db = knex({
     client: 'pg',
-    connection: "postgres://ddmuzyk:xJnELpoFQzG1cOcF0EuKUvSsZeg7qsqG@dpg-cf625tda499d72tmn5mg-a.frankfurt-postgres.render.com/chuckdb"
+    connection: PG_CONNECTION_STRING,
+    searchPath: ['knex', 'public']
 });
 
 const app = express();
