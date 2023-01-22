@@ -1,6 +1,5 @@
 const express = require('express');
 require('dotenv').config();
-console.log(process.env);
 const cors = require('cors');
 const bcrypt = require('bcrypt-nodejs');
 const knex = require('knex');
