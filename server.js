@@ -11,12 +11,12 @@ const output = require('./controllers/output');
 
 
 
-
+console.log(process.env.PG_CONNECTION_STRING)
 
 const db = knex({
     client: 'pg',
     connection: process.env.PG_CONNECTION_STRING,
-    searchPath: ['knex', 'public']
+    ssl: true
 });
 
 const app = express();
